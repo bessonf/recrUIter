@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/1', (req, res) => {
 	res.sendFile(path.resolve('static/questions/1.html'))

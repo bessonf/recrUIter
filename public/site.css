@@ -10,18 +10,18 @@ body{
 
 .box{
 	height: 80vh;
-    width: 80vw;
-    padding: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgb(240, 240, 241);
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 7px;
-    border-color: grey;
-    color: black;
+  width: 80vw;
+  padding: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgb(240, 240, 241);
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: grey;
+  color: black;
 	line-height:1.6;
 }
 

@@ -4,13 +4,6 @@ const router = express.Router();
 router.get('/1', (req, res) => {
 	res.sendFile(path.resolve('static/questions/1.html'))
 });
-router.get('/slider', (req, res) => {
-  res.render('questions/slider', {});
-});
-router.get('/decision', (req, res) => {
-  res.render('questions/decision', {});
-});
-
 
 router.get('/2', (req, res) => {
 	res.sendFile(path.resolve('static/questions/2.html'))
@@ -46,6 +39,14 @@ router.get('/9', (req, res) => {
 
 router.get('/10', (req, res) => {
 	res.render('questions/10', {});
+});
+
+router.get('/11', (req, res) => {
+	res.render('questions/11', {});
+  });
+
+router.get('/12', (req, res) => {
+	res.render('questions/12', {});
 });
 
 module.exports = router;

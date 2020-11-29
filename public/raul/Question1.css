@@ -49,6 +49,10 @@ input {
     cursor: pointer;
 }
 
+.radioLeft{
+    text-align: left;
+}
+
 .option .Next{
     text-align: center;
     background-color:  rgb(42, 151, 42);

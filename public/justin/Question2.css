@@ -8,6 +8,26 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.container {
+  margin: auto;
+  background-color: lightgray;
+  width: 60%;
+  border-radius: 15px;
+}
+
+.progress {
+  background-color: rgb(35, 55, 78);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.percent {
+  width: 9%;
+}
+
+
 .box{
     width: 1000px;
     height: 400px ;

@@ -5,7 +5,7 @@ const frankRoutes = require('./frank');
 
 const constructorMethod = (app) => {
   app.get('/', (req, res) => {
-    res.sendFile(path.resolve('static/justin/RecrUIter-Home.html'));
+    res.sendFile(path.resolve('static/home.html'));
   });
   app.use('/questions', questionRoutes);
   app.use('/justin', justinRoutes);

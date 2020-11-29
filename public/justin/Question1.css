@@ -14,6 +14,26 @@ body {
   border: 1px solid #aaaaaa;
 }
 
+.container {
+  margin: auto;
+  background-color: lightgray;
+  width: 60%;
+  border-radius: 15px;
+}
+
+.progress {
+  background-color: rgb(35, 55, 78);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.percent {
+  width: 5%;
+}
+
+
 .box {
   width: 1000px;
   height: 600px;

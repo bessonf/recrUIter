@@ -27,6 +27,12 @@ app.engine('handlebars', handlebarsInstance.engine);
 
 configRoutes(app);
 
-app.listen(3000, () => {
-    console.log("Running on port: " + String(3000))
+let port = process.env.PORT
+if (typeof port === 'undefined') {
+  console.warn('PORT env var unset, defaulting to 3000.');
+  port = '3000';
+}
+
+app.listen(port, () => {
+  console.log("Running on port: " + String(port))
 });

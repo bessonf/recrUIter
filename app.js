@@ -27,6 +27,6 @@ app.engine('handlebars', handlebarsInstance.engine);
 
 configRoutes(app);
 
-app.listen(process.env.PORT, () => {
-    console.log("Running on port: " + String(process.env.PORT))
+app.listen(3000, () => {
+    console.log("Running on port: " + String(3000))
 });

@@ -35,19 +35,11 @@ router.get('/8', (req, res) => {
 });
 
 router.get('/9', (req, res) => {
-	res.render('questions/9', {});
+	res.sendFile(path.resolve('static/questions/9.html'));
 });
 
 router.get('/10', (req, res) => {
-	res.render('questions/10', {});
-});
-
-router.get('/11', (req, res) => {
-	res.render('questions/11', {});
-  });
-
-router.get('/12', (req, res) => {
-	res.render('questions/12', {});
+	res.sendFile(path.resolve('static/questions/10.html'));
 });
 
 module.exports = router;

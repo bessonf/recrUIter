@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="/public/paul/question.css">
-
-  <form class="box" action="Question2.html" method="POST">
-    <h1> When working towards a solution, do you prefer diving right in and possibly taking more steps, or spending more time planning and possibly taking less steps?</h1>
-    <br>
-    <input type="radio" name="Selection" id="1" onclick="getit()" required/>
-    <label>Dive right in!</label>
-    <br><br>
-    <input type="radio"  name="Selection" id="2" onclick="getit()" required/>
-    <label>Take time to plan it out.</label>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div class="option">
-      <input type="submit" class="Back" value="Back">	
-      <input type="submit" class="Answer_Later" value="Answer Later">
-      <input type="submit" class="Next" value="Next">
+<head>
+    <meta charset="utf-8">
+    <title>RecrUIter</title>
+    <link rel="stylesheet" href="/public/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body onload="local()">
+    <div class="container">
+        <header>
+            <p>I'm a header</p>
+        </header>
+            <p>I will be on every page of the site</p>
+        <main>
+            <div class="card">
+                <h5 class="card-header">Question 2</h5>
+                <div class="card-body">
+                   
+                  <h5 class="card-title">How far would you go on this cliff?</h5>
+                  <form>
+                    <div class="form-group">
+                        <p class="card-text">More distance from camp means higher chances of life threatening danger</p>
+                      <img src ="http://localhost:3000/public/pictures/Cliff.PNG" alt ="cliff picture" class="cliff-pic">
+                      
+                      <div class="slidecontainer">
+                      <input type="range" min="1" max="100" value="1" class="slider" id="myRange" oninput="storeVal(this.value)" onchange="storeVal(this.value)">
+                      </div>
+                      <br />
+                      <p>Distance from camp: <span id="demo"></span></p>
+                    </div>
+                    <div class="option" style="text-align:center">
+                            <input class="zoom" type="submit" class="Back" value="Back">	
+                            <input class="zoom" type="submit" class="Answer_Later" value="Answer Later">
+                            <input class="zoom" type="submit" class="Next" value="Next">
+                      </div>    
+                  </form>
+                  
+                </div>
+              </div>
+        </main>
     </div>
-  </form>
+    <script>	  
+		function local(){
+			localStorage.q10 = 'risktaker_0';
+		}
 
+		function storeVal(newVal){
+			localStorage.q10 = 'risktaker_' + String(newVal/100);
+		}
+  
+	</script>
+    <footer>I'm a footer</footer>
+    <script src='/public/site.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 </html>

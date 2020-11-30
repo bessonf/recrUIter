@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="/public/paul/question.css">
+  <body onl>
+      <form class="box" action="Question2.html" method="POST">
+        <h1> At a job training workshop, it is important to… </h1>
+        <br>
+        <input type="radio" name="Selection" id="1" onclick="getit()" required/>
+        <label>Implement team building exercises and icebreakers</label>
+        <br><br>
+        <input type="radio"  name="Selection" id="2" onclick="getit()" required/>
+        <label>Create short-term and long-term goals for the organization</label>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <div class="option">
+          <input type="submit" class="Back" value="Back">	
+          <input type="submit" class="Answer_Later" value="Answer Later">
+          <input type="submit" class="Next" value="Next">
+        </div>
+      </form>
+      <script>
+        function local(){
+            localStorage.q9 = '';
+        }
 
-  <form class="box" action="Question2.html" method="POST">
-    <h1> At a job training workshop, it is important to… </h1>
-    <br>
-    <input type="radio" name="Selection" id="1" onclick="getit()" required/>
-    <label>Implement team building exercises and icebreakers</label>
-    <br><br>
-    <input type="radio"  name="Selection" id="2" onclick="getit()" required/>
-    <label>Create short-term and long-term goals for the organization</label>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div class="option">
-      <input type="submit" class="Back" value="Back">	
-      <input type="submit" class="Answer_Later" value="Answer Later">
-      <input type="submit" class="Next" value="Next">
-    </div>
-  </form>
+        function getit(){
+            var one = document.getElementById("1");
+            var two = document.getElementById("2");
 
+            if(one.checked==true)
+                localStorage.q7 = 'collaborative_1'
+            else if(two.checked==true)
+                localStorage.q7 = 'leader_1'
+        }
+    </script>
+  </body>
 </html>

@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/public/justin/Question2.css">
     <title>Assessment_Q2</title>
 </head>
-<body>
+<body onload="local()">
     
     <form class="box" action="Question2.html" method="POST">
         <h1> When working in a team situation, I help the group keep its focus. </h1>
-        <label style="display: inline-grid; width: 250px;">Do not do well <input type="radio" name="Selection" id="1" onclick="getit()" style="margin-left: 100px;" required/> </label>
-        <label style="display: inline-grid; width: 250px;">Do somewhat well <input type="radio"  name="Selection" id="2" onclick="getit()" style="margin-left: 100px;" required/> </label>
-        <label style="display: inline-grid; width: 250px;">Do well <input type="radio" name="Selection" id="3" onclick="getit()" style="margin-left: 100px;" required/> </label>
+        <label style="display: inline-grid; width: 250px;">Disagree <input type="radio" name="Selection" id="1" onclick="getit()" style="margin-left: 100px;" required/> </label>
+        <label style="display: inline-grid; width: 250px;">Neither agree nor disagree <input type="radio"  name="Selection" id="2" onclick="getit()" style="margin-left: 100px;" required/> </label>
+        <label style="display: inline-grid; width: 250px;">Agree <input type="radio" name="Selection" id="3" onclick="getit()" style="margin-left: 100px;" required/> </label>
     </br>
     </br>
     </br>
@@ -25,6 +25,24 @@
             <input type="submit" class="Next" value="Next">
         </div>
 </form>
-<script src="/public/Justin/Question2.js"></script>
+<script>
+    function local(){
+        localStorage.q7 = '';
+    }
+
+    function getit(){
+        var one = document.getElementById("1");
+        var two = document.getElementById("2");
+        var three = document.getElementById("3");
+
+        if(one.checked==true)
+            localStorage.q7 = 'leader_-1'
+        else if(two.checked==true)
+            localStorage.q7 = 'leader_0'
+        else if(three.checked==true)
+            localStorage.q7 = 'leader_1'
+
+    }
+</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 		}
 	</style>
-	<body>
+	<body onload="local()">
 	<div class="box" style="text-align:center;">
     <h1 style="text-align:center">What size group are you most effective in?</h1>
     
@@ -29,6 +29,11 @@
         </div>
 	</div>
 	<script>	  
+		function local(){
+			localStorage.q4 = 'individualist_1';
+		}
+
+
 		var groupSize = ['1','2','4','7+']
 		var picList = ['1.png','2.png','5.png','7.png']
 
@@ -36,6 +41,15 @@
 		document.getElementById("range").innerHTML=groupSize[val-1];
 		document.getElementById("groupPic").src = '/public/pictures/' + picList[val-1];
 		function showVal(newVal){
+			if (newVal==1) {
+				localStorage.q4 = 'individualist_1'
+			} else if (newVal==2) {
+				localStorage.q4 = 'individualist_0'
+			} else if (newVal==3) {
+				localStorage.q4 = 'collaborative_0'
+			} else if (newVal==4) {
+				localStorage.q4 = 'collaborative_1'
+			}
 			document.getElementById("range").innerHTML=groupSize[newVal-1];
 			document.getElementById("groupPic").src = '/public/pictures/' + picList[newVal-1];
 		}

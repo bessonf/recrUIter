@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/public/raul/Question2.css">
     <title>Assessment_Q2</title>
 </head>
-<body>
+<body onload="local()">
 
     <form class="box" action="Question2.html" method="POST">
         <h1>SCENARIO:</h1>
@@ -38,6 +38,30 @@
         <input type="submit" class="Next" value="Next">
     </div>
 </form>
-<script src="/public/Raul/Question2.js"></script>
+<script>
+    function local(){
+        localStorage.q6 = '';
+    }
+
+    function getit(){
+        var one = document.getElementById("1");
+        var two = document.getElementById("2");
+        var three = document.getElementById("3");
+        var three = document.getElementById("4");
+        var three = document.getElementById("5");
+
+        if(one.checked==true)
+            localStorage.q6 = 'leader_1';
+        else if(two.checked==true)
+            localStorage.q6 = 'collaborative_1';
+        else if(three.checked==true)
+            localStorage.q6 = 'individualist_1';
+        else if(two.checked==true)
+            localStorage.q6 = 'collaborative_1';
+        else if(three.checked==true)
+            localStorage.q6 = 'risktaker_1';
+
+    }
+</script>
 </body>
 </html>

@@ -32,6 +32,9 @@ for (let i = 0; i < list_item.length; i++){
         })
         list.addEventListener('drop', function (e) {
             this.append(draggedItem);
+            if (j == 1) {
+                localStorage.q1 = draggedItem.textContent;
+            }
         })
     }
 }

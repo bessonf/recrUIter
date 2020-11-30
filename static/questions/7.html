@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/justin/Question2.css">
     <title>Assessment_Q2</title>
+    <style>
+        		.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
+    </style>
 </head>
 <body onload="local()">
     
-    <form class="box" action="Question2.html" method="POST">
+    <form class="box" action="" method="GET">
+        <div class="container"> 
+            <div class="progress percent">60%</div> 
+        </div> 
         <h1> When working in a team situation, I help the group keep its focus. </h1>
         <label style="display: inline-grid; width: 250px;">Disagree <input type="radio" name="Selection" id="1" onclick="getit()" style="margin-left: 100px;" required/> </label>
         <label style="display: inline-grid; width: 250px;">Neither agree nor disagree <input type="radio"  name="Selection" id="2" onclick="getit()" style="margin-left: 100px;" required/> </label>
@@ -20,9 +36,9 @@
     </br>
     </br>
         <div class="option">
-            <input type="submit" class="Back" value="Back">	
-            <input type="submit" class="Answer_Later" value="Answer Later">
-            <input type="submit" class="Next" value="Next">
+			<input class="zoom" type="button" onclick="location.href='/questions/6'" value="Back"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/8'" value="Answer Later"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/8'" value="Next"/>
         </div>
 </form>
 <script>

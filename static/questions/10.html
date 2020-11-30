@@ -5,6 +5,19 @@
     <title>RecrUIter</title>
     <link rel="stylesheet" href="/public/site.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        		.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
+    </style>
 </head>
 <body onload="local()">
     <div class="container">
@@ -16,7 +29,9 @@
             <div class="card">
                 <h5 class="card-header">Question 2</h5>
                 <div class="card-body">
-                   
+                    <div class="container"> 
+                        <div class="progress percent">90%</div> 
+                    </div> 
                   <h5 class="card-title">How far would you go on this cliff?</h5>
                   <form>
                     <div class="form-group">
@@ -30,9 +45,9 @@
                       <p>Distance from camp: <span id="demo"></span></p>
                     </div>
                     <div class="option" style="text-align:center">
-                            <input class="zoom" type="submit" class="Back" value="Back">	
-                            <input class="zoom" type="submit" class="Answer_Later" value="Answer Later">
-                            <input class="zoom" type="submit" class="Next" value="Next">
+                        <input class="zoom" type="button" onclick="location.href='/questions/9'" value="Back"/>
+                        <input class="zoom" type="button" onclick="location.href='/results'" value="Answer Later"/>
+                        <input class="zoom" type="button" onclick="location.href='/results'" value="Next"/>
                       </div>    
                   </form>
                   

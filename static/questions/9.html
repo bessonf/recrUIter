@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="/public/paul/question.css">
+    <style>
+      		.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
+    </style>
   <body onl>
-      <form class="box" action="Question2.html" method="POST">
+      <form class="box" action="" method="GET">
+        <div class="container"> 
+          <div class="progress percent">80%</div> 
+      </div> 
         <h1> At a job training workshop, it is important to… </h1>
         <br>
         <input type="radio" name="Selection" id="1" onclick="getit()" required/>
@@ -17,9 +33,9 @@
         </br>
         </br>
         <div class="option">
-          <input type="submit" class="Back" value="Back">	
-          <input type="submit" class="Answer_Later" value="Answer Later">
-          <input type="submit" class="Next" value="Next">
+          <input class="zoom" type="button" onclick="location.href='/questions/8'" value="Back"/>
+          <input class="zoom" type="button" onclick="location.href='/questions/10'" value="Answer Later"/>
+          <input class="zoom" type="button" onclick="location.href='/questions/10'" value="Next"/>
         </div>
       </form>
       <script>

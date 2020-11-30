@@ -11,9 +11,24 @@
 		.zoom:hover {
 			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 		}
+
+		.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
 	</style>
 	<body onload="local()">
 	<div class="box" style="text-align:center;">
+		<div class="container"> 
+            <div class="progress percent">30%</div> 
+        </div> 
     <h1 style="text-align:center">What size group are you most effective in?</h1>
     
 	<img id="groupPic" src ="" alt ="groupPic" class="groupPic">
@@ -23,9 +38,9 @@
     </div>
     <p>Group Size: <span id="range"></span></p>  
 	        <div class="option" style="text-align:center">
-            <input class="zoom" type="submit" class="Back" value="Back">	
-            <input class="zoom" type="submit" class="Answer_Later" value="Answer Later">
-            <input class="zoom" type="submit" class="Next" value="Next">
+				<input class="zoom" type="button" onclick="location.href='/questions/3'" value="Back"/>
+				<input class="zoom" type="button" onclick="location.href='/questions/5'" value="Answer Later"/>
+				<input class="zoom" type="button" onclick="location.href='/questions/5'" value="Next"/>
         </div>
 	</div>
 	<script>	  

@@ -11,10 +11,26 @@
 	.zoom:hover {
 		transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 	}
+
+	.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
   </style>
   <body onload="local()">
 
-    <form class="box" action="/questions/4" method="GET" style="text-align:left">
+	<form class="box" action="" method="GET" style="text-align:left">
+		<div class="container"> 
+            <div class="progress percent">20%</div> 
+		</div> 
+		
         <h1 style="text-align:center"> How often would you like to travel for work?</h1>
 		<input type="radio" onclick="getit()" id="1" name="1" value="1">
   		<label for="1">I enjoy traveling, and wouldn't mind traveling for work multiple times a year</label><br><br>
@@ -29,9 +45,9 @@
 		</br>
 		</br>
 		<div class="option" style="text-align:center">
-			<input class="zoom" type="submit" onclick="location.href='/questions/2'" value="Back"/>
-			<input class="zoom" type="submit" onclick="location.href='/questions/3'" value="Answer Later"/>
-			<input class="zoom" type="submit" onclick="location.href='/questions/2'" value="Next"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/2'" value="Back"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/4'" value="Answer Later"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/4'" value="Next"/>
         </div>
 	</form>
 

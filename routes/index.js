@@ -3,7 +3,7 @@ const questionRoutes = require('./questions');
 
 const constructorMethod = (app) => {
   app.get('/', (req, res) => {
-    res.sendFile(path.resolve('static/home.html'));
+    res.sendFile(path.resolve('static/login.html'));
   });
   app.get('/resetpwd', (req, res) => {
     res.sendFile(path.resolve('static/resetpwd.html'));
@@ -11,8 +11,8 @@ const constructorMethod = (app) => {
   app.get('/signup', (req, res) => {
     res.sendFile(path.resolve('static/signup.html'));
   });
-  app.get('/login', (req, res) => {
-    res.sendFile(path.resolve('static/login.html'));
+  app.get('/about', (req, res) => {
+    res.sendFile(path.resolve('static/about.html'));
   });
   app.use('/questions', questionRoutes);
   app.use('*', (req, res) => {

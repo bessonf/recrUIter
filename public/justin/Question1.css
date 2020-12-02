@@ -90,6 +90,19 @@ h1 {
   border-radius: 10px;
 }
 
+.option {
+  position: relative;
+  top: 1em;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.option input[type="submit"]:hover {
+  transform: scale(
+    1.5
+  cursor: pointer;
+}
+
 .option .Next {
   text-align: center;
   margin-top: 50px;
@@ -98,10 +111,6 @@ h1 {
   height: 30px;
   border-radius: 20px;
   float: right;
-}
-
-.option input[type="submit"]:hover {
-  cursor: pointer;
 }
 
 .option .Back {

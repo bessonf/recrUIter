@@ -1,0 +1,78 @@
+body{
+    margin: 50px;
+    padding: 0;
+    font-family: sans-serif;
+    background: rgb(35, 55, 78);
+    color: white;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box{
+    width: 1000px;
+    height: auto ;
+    padding: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-content: center;
+    background: rgb(240, 240, 241);
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 7px;
+    border-color: grey;
+    color: black;
+}
+
+h1{
+
+    font-size: 30px;
+}
+
+
+input {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    top: auto;
+}
+
+.option{
+    position: relative;
+    top: 1em;
+}
+
+
+.option input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.option .Next{
+    text-align: center;
+    background-color:  rgb(42, 151, 42);
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    float: right;
+    float: bottom;
+}
+
+.option .Back{
+    text-align: center;
+    background-color:red;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    float: Left;
+}
+
+.option .Answer_Later{
+    text-align: center;
+    background-color: grey;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    float: Center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/public/site.css">
+	<style>
+		.zoom {
+			transition: transform .2s; /* Animation */
+			margin: 0 auto;
+		}
+
+		.zoom:hover {
+			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+	</style>
+	<body>
+	<div class="box" style="text-align:center;">
+    <h1 style="text-align:center">What size group are you most effective in?</h1>
+    
+	<img id="groupPic" src ="" alt ="groupPic" class="groupPic">
+    
+    <div class="slidecontainer">
+	<input id="valR" type="range" min="1" max="4" value="1" oninput="showVal(this.value)" onchange="showVal(this.value)" />
+    </div>
+    <p>Group Size: <span id="range"></span></p>  
+	        <div class="option" style="text-align:center">
+            <input class="zoom" type="submit" class="Back" value="Back">	
+            <input class="zoom" type="submit" class="Answer_Later" value="Answer Later">
+            <input class="zoom" type="submit" class="Next" value="Next">
+        </div>
+	</div>
+	<script>	  
+		var groupSize = ['1','2','4','7+']
+		var picList = ['1.png','2.png','5.png','7.png']
+
+		var val = document.getElementById("valR").value;
+		document.getElementById("range").innerHTML=groupSize[val-1];
+		document.getElementById("groupPic").src = '/public/pictures/' + picList[val-1];
+		function showVal(newVal){
+			document.getElementById("range").innerHTML=groupSize[newVal-1];
+			document.getElementById("groupPic").src = '/public/pictures/' + picList[newVal-1];
+		}
+  
+	</script>
+	<script src="tota11y.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/public/site.css">
+  <style>
+	.zoom {
+		transition: transform .2s; /* Animation */
+		margin: 0 auto;
+	}
+
+	.zoom:hover {
+		transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+  </style>
+  <body>
+
+    <form class="box" action="Question2.html" method="POST" style="text-align:justify;">
+        <h1 style="text-align:center"> How often would you like to travel for work?</h1>
+		<input type="radio" id="1" name="1" value="1">
+  		<label for="1">I enjoy traveling, and wouldn't mind traveling for work multiple times a year</label><br>
+		<input type="radio" id="2" name="2" value="2">
+  		<label for="2">Traveling is nice, however I'd prefer to travel once per year</label><br>
+		<input type="radio" id="3" name="3" value="3">
+  		<label for="3">I'd prefer not to travel for work</label><br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+        <div class="option" style="text-align:center">
+            <input class="zoom" type="submit" class="Back" value="Back">	
+            <input class="zoom" type="submit" class="Answer_Later" value="Answer Later">
+            <input class="zoom" type="submit" class="Next" value="Next">
+        </div>
+	</form>
+
+	<script src="tota11y.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/raul/Question1.css">
+    <title>Assessment_Q1</title>
+    <style>
+        .progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
+    </style>
+</head>
+<body onload="local()">
+
+    <form class="box" action="" method="GET">
+        <div class="container"> 
+            <div class="progress percent">40%</div> 
+        </div> 
+        <h1> I am willing to take a chance at failure for the sake of innovation </h1><br>
+        <div class="radioLeft">
+            <input type="radio" name="Selection" id="1" onclick="getit()" required/> 
+            <label for="1">Agree </label><br><br>
+            <input type="radio"  name="Selection" id="2" onclick="getit()" required/>
+            <label for="2">Neither agree nor disagree</label><br><br>
+            <input type="radio" name="Selection" id="3" onclick="getit()" required/> 
+            <label for="3">Disagree</label>
+        </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div class="option">
+        <input class="zoom" type="button" onclick="location.href='/questions/4'" value="Back"/>
+        <input class="zoom" type="button" onclick="location.href='/questions/6'" value="Answer Later"/>
+        <input class="zoom" type="button" onclick="location.href='/questions/6'" value="Next"/>
+    </div>
+</form>
+<script>
+    function local(){
+        localStorage.q5 = '';
+    }
+
+    function getit(){
+        var one = document.getElementById("1");
+        var two = document.getElementById("2");
+        var three = document.getElementById("3");
+
+        if(one.checked==true)
+            localStorage.q5 = 'risktaker_1';
+        else if(two.checked==true)
+            localStorage.q5 = 'risktaker_0';
+        else if(three.checked==true)
+            localStorage.q5 = 'risktaker_-1';
+
+    }
+</script>
+</body>
+</html>

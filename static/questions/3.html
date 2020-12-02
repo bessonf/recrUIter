@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/public/raul/Question1.css">
+  <style>
+	.zoom {
+		transition: transform .2s; /* Animation */
+		margin: 0 auto;
+	}
+
+	.zoom:hover {
+		transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+
+	.progress {
+			background-color: rgb(35, 55, 78);
+			color: white;
+			padding: 1%;
+			text-align: right;
+			font-size: 20px;
+			border-radius: 15px;
+		}
+		.percent {
+			width: 5%;
+		}
+  </style>
+  <body onload="local()">
+
+	<form class="box" action="" method="GET" style="text-align:left">
+		<div class="container"> 
+            <div class="progress percent">20%</div> 
+		</div> 
+		
+        <h1 style="text-align:center"> How often would you like to travel for work?</h1>
+		<input type="radio" onclick="getit()" id="1" name="1" value="1">
+  		<label for="1">I enjoy traveling, and wouldn't mind traveling for work multiple times a year</label><br><br>
+		<input type="radio" onclick="getit()" id="2" name="2" value="2">
+  		<label for="2">Traveling is nice, however I'd prefer to travel once per year</label><br><br>
+		<input type="radio" onclick="getit()" id="3" name="3" value="3">
+  		<label for="3">I'd prefer not to travel for work</label><br><br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		<div class="option" style="text-align:center">
+			<input class="zoom" type="button" onclick="location.href='/questions/2'" value="Back"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/4'" value="Answer Later"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/4'" value="Next"/>
+        </div>
+	</form>
+
+	<script>
+		function local(){
+			localStorage.q3 = '';
+		}
+
+		function getit(){
+			var one = document.getElementById("1");
+			var two = document.getElementById("2");
+			var three = document.getElementById("3");
+
+			// STORE CHOICE IN LOCAL STORAGE
+			if(one.checked==true)
+				localStorage.q3 = 'traveler_2';
+			else if (two.checked==true)
+				localStorage.q3 = 'traveler_1';
+			else if (three.checked==true)
+				localStorage.q3 = 'traveler_0';
+
+		}
+	</script>
+  </body>
+</html>

@@ -1,17 +1,20 @@
 const path = require('path');
 const questionRoutes = require('./questions');
-const justinRoutes = require('./justin');
-const frankRoutes = require('./frank');
-const resultRoutes = require('./results'); 
 
 const constructorMethod = (app) => {
   app.get('/', (req, res) => {
-    res.sendFile(path.resolve('static/justin/RecrUIter-Home.html'));
+    res.sendFile(path.resolve('static/login.html'));
+  });
+  app.get('/resetpwd', (req, res) => {
+    res.sendFile(path.resolve('static/resetpwd.html'));
+  });
+  app.get('/signup', (req, res) => {
+    res.sendFile(path.resolve('static/signup.html'));
+  });
+  app.get('/about', (req, res) => {
+    res.sendFile(path.resolve('static/about.html'));
   });
   app.use('/questions', questionRoutes);
-  app.use('/justin', justinRoutes);
-  app.use('/frank', frankRoutes);
-  app.use('/results', resultRoutes); 
   app.use('*', (req, res) => {
     res.status(404).json({ error: 'Not found' });
   });

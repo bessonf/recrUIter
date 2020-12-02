@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/justin/Question1.css">
+    <title>Assessment</title>
+</head>
+<body onload="local()">
+    
+    <form class="box" action="" method="POST">
+        <div class="container"> 
+            <div class="progress percent">0%</div> 
+        </div> 
+        <h1>Which of these values best describe you (ranked from top to bottom): </h1>
+    </br>
+    </br>
+        <div class="lists">
+            <div class="list">
+               <div class="list-item" draggable="true">Risk Taker</div>
+                <div class="list-item" draggable="true">Traveler</div>
+                <div class="list-item" draggable="true">Team Worker</div>
+                <div class="list-item" draggable="true">Work Alone</div>
+                <div class="list-item" draggable="true">Decision Maker</div>
+            </div>
+            <div class="list2">
+                <div class="list"></div>
+                <div class="list"></div>
+                <div class="list"></div>
+                <div class="list"></div>
+                <div class="list"></div>               
+            </div>
+        </div>
+    </br>
+    </br>
+        <div class="option">
+			<input class="zoom" type="button" onclick="location.href='/'" value="Back"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/2'" value="Answer Later"/>
+			<input class="zoom" type="button" onclick="location.href='/questions/2'" value="Next"/>
+        </div>
+    </form>
+    <script>
+        function local(){
+            localStorage.q1 = '';
+        }
+
+        const list_item = document.querySelectorAll('.list-item');
+        const lists = document.querySelectorAll('.list');
+
+        let draggedItem = null;
+
+        for (let i = 0; i < list_item.length; i++){
+            const item = list_item[i];
+
+            item.addEventListener('dragstart', function () {
+                draggedItem = item;
+                setTimeout(function () {
+                    item.style.display = "none";
+                }, 0);
+            });
+
+            item.addEventListener('dragend', function () {
+                setTimeout (function () {
+                    draggedItem.style.display = "block"
+                    draggedItem = null;
+
+                }, 0);
+            })
+
+            for (let j =0 ; j < lists.length; j++) {
+                const list = lists[j];
+
+                list.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                });
+                list.addEventListener('dragenter', function (e) {
+                    e.preventDefault();
+                })
+                list.addEventListener('drop', function (e) {
+                    this.append(draggedItem);
+
+                    // STORE CHOICE IN LOCAL STORAGE
+                    if (j == 1) {
+                        if (draggedItem.textContent == 'Risk Taker'){
+                            localStorage.q1 = 'risktaker_1';
+                        } else if (draggedItem.textContent == 'Traveler'){
+                            localStorage.q1 = 'traveler_1';
+                        } else if (draggedItem.textContent == 'Team Worker'){
+                            localStorage.q1 = 'collaborator_1';
+                        } else if (draggedItem.textContent == 'Work Alone'){
+                            localStorage.q1 = 'individualist_1';
+                        } else if (draggedItem.textContent == 'Decision Maker'){
+                            localStorage.q1 = 'leader_1';
+                        }
+                    }
+
+                })
+            }
+        }
+    </script>
+    <script src="/public/justin/Question1.js"></script>
+</body>
+</html>

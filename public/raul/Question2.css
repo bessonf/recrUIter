@@ -51,20 +51,24 @@ input {
 
 .option .Next{
     text-align: center;
-    background-color:  rgb(42, 151, 42);
     width: 100px;
     height: 30px;
     border-radius: 20px;
+    background-color:green;
     float: right;
     float: bottom;
 }
 
+.radioLeft{
+    text-align: left;
+}
+
 .option .Back{
     text-align: center;
-    background-color:red;
     width: 100px;
     height: 30px;
     border-radius: 20px;
+    background-color:red;
     float: Left;
 }
 

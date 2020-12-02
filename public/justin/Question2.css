@@ -73,7 +73,7 @@ input {
 }
 
 
-.option input[type="submit"]:hover {
+.option input[type="button"]:hover {
     height: 40px;
     cursor: pointer;
 }

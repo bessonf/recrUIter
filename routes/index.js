@@ -1,5 +1,6 @@
 const path = require('path');
 const questionRoutes = require('./questions');
+const resultRoutes = require('./results');
 
 const constructorMethod = (app) => {
   app.get('/', (req, res) => {
@@ -15,6 +16,7 @@ const constructorMethod = (app) => {
     res.sendFile(path.resolve('static/about.html'));
   });
   app.use('/questions', questionRoutes);
+  app.use('/results', resultRoutes);
   app.use('*', (req, res) => {
     res.status(404).json({ error: 'Not found' });
   });

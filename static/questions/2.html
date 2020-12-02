@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/justin/Question2.css">
-    <title>Assessment_Q2</title>
+    <title>Assessment</title>
+    <style>
+        .zoom {
+            transition: transform .2s; /* Animation */
+            margin: 0 auto;
+        }
+    
+        .zoom:hover {
+            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    
+        .progress {
+                background-color: rgb(35, 55, 78);
+                color: white;
+                padding: 1%;
+                text-align: right;
+                font-size: 20px;
+                border-radius: 15px;
+            }
+            
+        .percent {
+            width: 5%;
+        }
+
+        .container {
+            margin: auto;
+            background-color: lightgray;
+            width: 60%;
+            border-radius: 15px;
+        }
+      </style>
 </head>
 <body onload="local()">
     

@@ -6,17 +6,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/site.css">
     <style>
-        .progress {
-			background-color: rgb(35, 55, 78);
-			color: white;
-			padding: 1%;
-			text-align: right;
-			font-size: 20px;
-			border-radius: 15px;
-		}
-		.percent {
-			width: 5%;
-		}
+      .zoom {
+          transition: transform .2s; /* Animation */
+          margin: 0 auto;
+      }
+  
+      .zoom:hover {
+          transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+  
+      .progress {
+              background-color: rgb(35, 55, 78);
+              color: white;
+              padding: 1%;
+              text-align: right;
+              font-size: 20px;
+              border-radius: 15px;
+          }
+          
+      .percent {
+          width: 5%;
+      }
+
+      .container {
+          margin: auto;
+          background-color: lightgray;
+          width: 60%;
+          border-radius: 15px;
+      }
     </style>
 </head>
 <body onload="local()">
@@ -39,8 +56,8 @@
                     </div>
                     <div class="option" style="text-align:center">
                         <input class="zoom" type="button" onclick="location.href='/questions/9'" value="Back"/>
-                        <input class="zoom" type="button" onclick="location.href='/results'" value="Answer Later"/>
-                        <input class="zoom" type="button" onclick="location.href='/results'" value="Next"/>
+                        <input class="zoom" type="button" onclick="results()" value="Answer Later"/>
+                        <input class="zoom" type="button" onclick="results()" value="Next"/>
                       </div>    
                   </form>
                   
@@ -55,8 +72,61 @@
 
 		function storeVal(newVal){
 			localStorage.q10 = 'risktaker_' + String(newVal/100);
-		}
-  
+        }
+        
+        function results(){
+          let qs = [
+            String(localStorage.q1).split('_'),
+            String(localStorage.q2).split('_'),
+            String(localStorage.q3).split('_'),
+            String(localStorage.q4).split('_'),
+            String(localStorage.q5).split('_'),
+            String(localStorage.q6).split('_'),
+            String(localStorage.q7).split('_'),
+            String(localStorage.q8).split('_'),
+            String(localStorage.q9).split('_'),
+            String(localStorage.q10).split('_'),
+          ];
+          
+          let scores = {
+            risktaker : 0,
+            individualist : 0,
+            collaborator : 0,
+            leader : 0,
+            traveler : 0
+          };
+
+          qs.forEach(q => {
+            if (Array.isArray(q)) {
+              let category = String(q[0]);
+              let score = parseFloat(q[1]);
+              scores[category] = scores[category] + score;
+            }
+          })
+
+          let maxScore = 0;
+          let maxCategory = '';
+          for (var category in scores) {
+            let score = scores[category];
+            if (score > maxScore) {
+              maxScore = score;
+              maxCategory = category;
+            }
+          }
+          
+          if (maxCategory == 'risktaker') {
+            window.location.replace('/results/risk_taker');
+          } else if (maxCategory == 'traveler') {
+            window.location.replace('/results/traveler');
+          } else if (maxCategory == 'leader') {
+            window.location.replace('/results/decision_maker');
+          } else if (maxCategory == 'collaborator') {
+            window.location.replace('/results/collaborator');
+          } else if (maxCategory == 'individualist') {
+            window.location.replace('/results/individualist');
+          }
+
+        }
 	</script>
     <script src='/public/site.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

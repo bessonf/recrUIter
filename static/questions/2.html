@@ -6,15 +6,47 @@
     <link rel="stylesheet" href="/public/justin/Question2.css">
     <title>Assessment</title>
     <style>
-        .zoom {
-            transition: transform .2s; /* Animation */
-            margin: 0 auto;
-        }
-    
-        .zoom:hover {
-            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        }
-    
+	    
+        .option {
+  position: relative;
+  top: 1em;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.option input[type="button"]:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.option .Next {
+  text-align: center;
+  background-color: rgb(42, 151, 42);
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: right;
+  float: bottom;
+}
+
+.option .Back {
+  text-align: center;
+  background-color: red;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: Left;
+}
+
+.option .Answer_Later {
+  text-align: center;
+  background-color: grey;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: Center;
+}
+	    
         .progress {
                 background-color: rgb(35, 55, 78);
                 color: white;
@@ -53,9 +85,9 @@
     </br>
     </br>
         <div class="option">
-			<input class="zoom" type="button" onclick="location.href='/questions/1'" value="Back"/>
-			<input class="zoom" type="button" onclick="location.href='/questions/3'" value="Answer Later"/>
-			<input class="zoom" type="button" onclick="location.href='/questions/3'" value="Next"/>
+			<input class="Back" type="button" onclick="location.href='/questions/1'" value="Back"/>
+			<input class="Answer_Later" type="button" onclick="location.href='/questions/3'" value="Answer Later"/>
+			<input class="Next" type="button" onclick="location.href='/questions/3'" value="Next"/>
         </div>
 </form>
 <script>

@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="/public/paul/question.css">
-    <style>
-      .zoom {
-          transition: transform .2s; /* Animation */
-          margin: 0 auto;
-      }
-  
-      .zoom:hover {
-          transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-      }
-  
-      .progress {
-              background-color: rgb(35, 55, 78);
-              color: white;
-              padding: 1%;
-              text-align: right;
-              font-size: 20px;
-              border-radius: 15px;
-          }
-          
-      .percent {
-          width: 80%;
-      }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+	input {
+		display: inline-block;
+		width: auto;
+		position: relative;
+		top: auto;
+	  }
+	  </style>
 
-      .container {
-          margin: auto;
-          background-color: lightgray;
-          width: 60%;
-          border-radius: 15px;
-      }
-    </style>
-  <body onl>
-      <form class="box" action="" method="GET">
+  <link rel="stylesheet" href="/public/site.css">
+
+
+  <body onload="local()">
+
+      <form class="box1" action="" method="GET" style="text-align:left">
         <div class="container"> 
-          <div class="progress percent">80%</div> 
+          <div class="progress percentq9">80%</div> 
       </div> 
-        <h1> At a job training workshop, it is important to… </h1>
-        <br>
+    </br>
+    </br>
+    </br>
+        <h1 style="text-align:center"> At a job training workshop, it is important to… </h1>
+      </br>
+      </br>
+      </br>
+      </br>
         <input type="radio" name="Selection" id="1" onclick="getit()" required/>
         <label>Implement team building exercises and icebreakers</label>
-        <br><br>
+        <br><br><br>
         <input type="radio"  name="Selection" id="2" onclick="getit()" required/>
         <label>Create short-term and long-term goals for the organization</label>
         </br>
@@ -48,11 +37,10 @@
         </br>
         </br>
         </br>
-        </br>
-        <div class="option">
-          <input class="zoom" type="button" onclick="location.href='/questions/8'" value="Back"/>
-          <input class="zoom" type="button" onclick="location.href='/questions/10'" value="Answer Later"/>
-          <input class="zoom" type="button" onclick="location.href='/questions/10'" value="Next"/>
+        <div class="option" style="text-align:center">
+          <input class="Back" type="button" onclick="location.href='/questions/8'" value="Back"/>
+          <input class="Answer_Later" type="button" onclick="location.href='/questions/10'" value="Answer Later"/>
+          <input class="Next" type="button" onclick="location.href='/questions/10'" value="Next"/>
         </div>
       </form>
       <script>

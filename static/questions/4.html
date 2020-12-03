@@ -2,40 +2,12 @@
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/public/site.css">
-    <style>
-        .zoom {
-            transition: transform .2s; /* Animation */
-            margin: 0 auto;
-        }
     
-        .zoom:hover {
-            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        }
-    
-        .progress {
-                background-color: rgb(35, 55, 78);
-                color: white;
-                padding: 1%;
-                text-align: right;
-                font-size: 20px;
-                border-radius: 15px;
-            }
-            
-        .percent {
-            width: 30%;
-        }
-
-        .container {
-            margin: auto;
-            background-color: lightgray;
-            width: 60%;
-            border-radius: 15px;
-        }
       </style>
 	<body onload="local()">
-	<div class="box" style="text-align:center;">
+	<div class="box6" style="text-align:center;">
 		<div class="container"> 
-            <div class="progress percent">30%</div> 
+            <div class="progress percentq4">30%</div> 
         </div> 
     <h1 style="text-align:center">What size group are you most effective in?</h1>
     
@@ -46,9 +18,9 @@
     </div>
     <p>Group Size: <span id="range"></span></p>  
 	        <div class="option" style="text-align:center">
-				<input class="zoom" type="button" onclick="location.href='/questions/3'" value="Back"/>
-				<input class="zoom" type="button" onclick="location.href='/questions/5'" value="Answer Later"/>
-				<input class="zoom" type="button" onclick="location.href='/questions/5'" value="Next"/>
+				<input class="Back" type="button" onclick="location.href='/questions/3'" value="Back"/>
+				<input class="Answer_Later" type="button" onclick="location.href='/questions/5'" value="Answer Later"/>
+				<input class="Next" type="button" onclick="location.href='/questions/5'" value="Next"/>
         </div>
 	</div>
 	<script>	  

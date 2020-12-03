@@ -5,19 +5,42 @@
     <title>RecrUIter</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/site.css">
-
+<style>
+  .container1 {
+  margin: auto;
+  background-color: lightgray;
+  width: 60%;
+  height: 50%;
+  border-radius: 15px;
+}
+.progress {
+  background-color: rgb(35, 55, 78);
+  text-align: justify;
+  color: white;
+  padding: 0.55%;
+  font-size: 20px;
+  height: 50%;
+  border-radius: 15px;
+}
+.percentq10 {
+  width: 90%;
+}
+</style>
 </head>
 <body onload="local()">
-    <div class="container">
-        <main>
-            <div class="card">
+  <form class="box6" action="" method="GET">
+    <div class="container1"> 
+      <div class="progress percentq10" style="text-align: right;">90%</div> 
+  </div> 
+  <br/>
+  <br/>
                 <!-- <h5 class="card-header" style="color: black;">Question 10</h5> -->
-                <div class="card-body">
+               
                   <h5 class="card-title" style="color: black;">How far would you go on this cliff?</h5>
                   <form>
-                    <div class="form-group">
-                        <p class="card-text">More distance from camp means higher chances of life threatening danger</p>
-                      <img src ="http://localhost:3000/public/pictures/Cliff.PNG" alt ="cliff picture" class="cliff-pic">
+                    <div class="form-group" style="text-align: center;">
+                        <p class="card-text" style="color: red;">More distance from camp means higher chances of life threatening danger</p>
+                      <img src ="/public/pictures/Cliff.PNG" alt ="cliff picture" class="cliff-pic">
                       
                       <div class="slidecontainer">
                       <input type="range" min="1" max="100" value="1" class="slider" id="myRange" oninput="storeVal(this.value)" onchange="storeVal(this.value)">
@@ -32,9 +55,8 @@
                       </div>    
                   </form>
                   
-                </div>
               </div>
-        </main>
+       
     </div>
     <script>	  
 		function local(){

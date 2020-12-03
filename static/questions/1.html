@@ -3,77 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/site.css">
     <link rel="stylesheet" href="/public/justin/Question1.css">
     <title>Assessment</title>
-    <style>
-    
-	.option {
-  position: relative;
-  top: 1em;
-  transition: transform 0.2s; /* Animation */
-  margin: 0 auto;
-}
 
-.option input[type="button"]:hover {
-  transform: scale( 1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  transition: 0.2s all ease;
-}
-.option .Next {
-  text-align: center;
-  background-color: rgb(42, 151, 42);
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  float: right;
-  float: bottom;
-}
-
-.option .Back {
-  text-align: center;
-  background-color: red;
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  float: Left;
-}
-
-.option .Answer_Later {
-  text-align: center;
-  background-color: grey;
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  float: Center;
-}
-	    
-        .progress {
-                background-color: rgb(35, 55, 78);
-                color: white;
-                padding: 1%;
-                text-align: right;
-                font-size: 20px;
-                border-radius: 15px;
-            }
-            
-        .percent {
-            width: 5%;
-        }
-
-        .container {
-            margin: auto;
-            background-color: lightgray;
-            width: 60%;
-            border-radius: 15px;
-        }
-	   
-      </style>
 </head>
 <body onload="local()">
     
-    <form class="box" action="" method="POST">
+    <form class="box1" action="" method="POST">
         <div class="container"> 
-            <div class="progress percent">0%</div> 
+            <div class="progress percentq1">0%</div> 
         </div> 
+    </br>
+    </br>
         <h1>Which of these values best describe you (ranked from top to bottom): </h1>
     </br>
     </br>
@@ -93,6 +35,8 @@
                 <div class="list"></div>               
             </div>
         </div>
+    </br>
+    </br>
     </br>
     </br>
         <div class="option">

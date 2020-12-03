@@ -3,45 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/raul/Question2.css">
-    <title>Assessment</title>
-    <style>
-        .zoom {
-            transition: transform .2s; /* Animation */
-            margin: 0 auto;
-        }
-    
-        .zoom:hover {
-            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        }
-    
-        .progress {
-                background-color: rgb(35, 55, 78);
-                color: white;
-                padding: 1%;
-                text-align: right;
-                font-size: 20px;
-                border-radius: 15px;
-            }
-            
-        .percent {
-            width: 50%;
-        }
-
-        .container {
-            margin: auto;
-            background-color: lightgray;
-            width: 60%;
-            border-radius: 15px;
-        }
-      </style>
+    <link rel="stylesheet" href="/public/site.css">
+        <title>Assessment</title>
+   
 </head>
 <body onload="local()">
 
-    <form class="box" action="" method="GET">
+    <form class="box6" action="" method="GET">
         <div class="container"> 
-            <div class="progress percent">50%</div> 
+            <div class="progress percentq6">50%</div> 
         </div> 
+        <br>
+        <br>
         <h1>SCENARIO:</h1>
         <p>You are an employee working at a large retailer during the holiday season.
         <br>You notice that one of your colleagues that you aren't close with has not 
@@ -64,11 +37,10 @@
     <br>
     <br>
     <br>
-    <br>
     <div class="option">
-        <input class="zoom" type="button" onclick="location.href='/questions/5'" value="Back"/>
-        <input class="zoom" type="button" onclick="location.href='/questions/7'" value="Answer Later"/>
-        <input class="zoom" type="button" onclick="location.href='/questions/7'" value="Next"/>
+        <input class="Back" type="button" onclick="location.href='/questions/5'" value="Back"/>
+        <input class="Answer_Later" type="button" onclick="location.href='/questions/7'" value="Answer Later"/>
+        <input class="Next" type="button" onclick="location.href='/questions/7'" value="Next"/>
     </div>
 </form>
 <script>

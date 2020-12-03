@@ -1,144 +1,267 @@
-body{
-    margin: 50px;
-    padding: 0;
-    font-family: sans-serif;
-    background: rgb(35, 55, 78);
-    color: white;
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  margin: 50px;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgb(35, 55, 78);
+  color: white;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.box{
-	height: 80vh;
+.box {
+  height: 80vh;
   width: 80vw;
   padding: 60px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: rgb(240, 240, 241);
   border-radius: 20px;
   border-style: solid;
   border-width: 7px;
   border-color: grey;
   color: black;
-	line-height:1.6;
+  line-height: 1.6;
 }
 
-h1{
-    font-size: 30px;
+.box1 {
+  width: 1000px;
+  height: 600px;
+  padding: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(240, 240, 241);
+  text-align: center;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: grey;
+  color: black;
 }
 
-.groupPic{
-	vertical-align:center;
-	width: 50vw;
-	height: 50vh;
-	border:0;
+.box6 {
+  width: 1000px;
+  height: auto;
+  padding: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  align-content: center;
+  background: rgb(240, 240, 241);
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: grey;
+  color: black;
+}
+
+.radioLeft {
+  text-align: left;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.groupPic {
+  vertical-align: center;
+  width: 50vw;
+  height: 50vh;
+  border: 0;
 }
 
 /* extra rules */
 
 label {
-	font-weight: bold;
-	font-size:16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-
 .slidecontainer {
-	width: 100%; /* Width of the outside container */
+  width: 100%; /* Width of the outside container */
 }
 
 .slider {
-	-webkit-appearance: none;
-	width: 100%;
-	height: 15px;
-	border-radius: 5px;  
-	background: #d3d3d3;
-	outline: none;
-	opacity: 0.7;
-	-webkit-transition: .2s;
-	transition: opacity .2s;
-  }
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
 
 .slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 80px;
-	height: 80px;
-	border: 0;
-	background: url("https://img.icons8.com/clouds/80/000000/walking.png");
-	cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-	width: 80px;
-	height: 80px;
-	border: 0;
-	background: url("https://img.icons8.com/clouds/80/000000/walking.png");
-	cursor: pointer;
-  }
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 80px;
+  border: 0;
+  background: url("https://img.icons8.com/clouds/80/000000/walking.png");
+  cursor: pointer;
+}
 
-  .cliff-pic{
-	/* width: 1050px;
+.slider::-moz-range-thumb {
+  width: 80px;
+  height: 80px;
+  border: 0;
+  background: url("https://img.icons8.com/clouds/80/000000/walking.png");
+  cursor: pointer;
+}
+
+.cliff-pic {
+  /* width: 1050px;
 	height: 500px;
     border:0; */
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .card-text{
-	  font-size: 14pt;
-	  color: red; 
-  }
-
-.option{
-    position: relative;
-    top: 1em;
-    transition: transform 0.2s; /* Animation */
-    margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.option input[type="submit"]:hover {
-   transform: scale(
-    1.5
+.card-text {
+  font-size: 14pt;
+  color: red;
+}
+
+#div1 {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+}
+
+.lists {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 48%;
+}
+
+.lists .list {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  margin: 5px 100px;
+  padding: 10px;
+  transition: all 0.2s linear;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.lists .list2 .list {
+  width: 200px;
+  height: 30px;
+  transition: all 0.2s linear;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.lists .list-item {
+  height: 45px;
+  border: darkgrey;
+  margin: 2px 2px;
+  padding: 0px;
+  cursor: pointer;
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+.option {
+  position: relative;
+  top: 1em;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.option input[type="button"]:hover {
+  transform: scale(
+    1.25
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    cursor: pointer;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.option .Next {
+  text-align: center;
+  background-color: rgb(42, 151, 42);
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: right;
+  float: bottom;
 }
 
-.option .Next{
-    text-align: center;
-    background-color:  rgb(42, 151, 42);
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    float: right;
-    float: bottom;
+.option .Back {
+  text-align: center;
+  background-color: red;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: Left;
 }
 
-.option .Back{
-    text-align: center;
-    background-color:red;
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    float: Left;
+.option .Answer_Later {
+  text-align: center;
+  background-color: grey;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  float: Center;
 }
 
-.option .Answer_Later{
-    text-align: center;
-    background-color: grey;
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    float: Center;
+.progress {
+  background-color: rgb(35, 55, 78);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
 }
 
-.career-image{
-    max-width: 100%;
-    max-height: 100%;
-
+.percentq1 {
+  width: 5%;
+}
+.percentq2 {
+  width: 10%;
+}
+.percentq3 {
+  width: 20%;
+}
+.percentq4 {
+  width: 30%;
+}
+.percentq5 {
+  width: 40%;
+}
+.percentq6 {
+  width: 50%;
+}
+.percentq7 {
+  width: 60%;
+}
+.percentq8 {
+  width: 70%;
+}
+.percentq9 {
+  width: 80%;
 }
 
-.result-title{
-    color: rgb(27, 75, 163);
+.container {
+  margin: auto;
+  background-color: lightgray;
+  width: 60%;
+  border-radius: 15px;
+}
+
+.career-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.result-title {
+  color: rgb(27, 75, 163);
 }

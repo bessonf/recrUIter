@@ -1,1 +1,9 @@
-deployed at https://cs545-recruiter.herokuapp.com/
+Deployment Instructions
+- navigate to root of project
+- execute "npm install"
+- execute "npm start"
+
+Usage
+- any set of credentials are valid at login page
+
+Enjoy!
